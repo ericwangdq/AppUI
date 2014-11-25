@@ -54,19 +54,19 @@
     width: 150px;
 }
 .ui-page-theme-metal .tab-bar.sorting.two{
-    width: 180px;
+    width: 155px;
 }
 .ui-page-theme-metal .tab-bar.three{
     width: 225px;
 }
 .ui-page-theme-metal .tab-bar.sorting.three{
-    width: 240px;
+    width: 235px;
 }
 .ui-page-theme-metal .tab-bar.four{
     width: 300px;
 }
 .ui-page-theme-metal .tab-bar.sorting.four{
-    width: 320px;
+    width: 310px;
 }
 .ui-page-theme-metal .tab-bar .ui-btn{
     border-top: 2px solid #2685f9;
@@ -214,6 +214,8 @@
 }
 .ui-group-theme-contract.ui-listview > li
 {
+    padding-top: .5em;
+    padding-bottom: .5em;
     background-color: #fff;
     border-top-color: #dedbdb;
 }
