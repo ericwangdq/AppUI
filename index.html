@@ -14,65 +14,84 @@
     <title>合同应用</title>
 </head>
 <body>
+<div data-role="page" id="all-pages" data-theme="metal" class="no-footer">
+<header class="page-header" data-role="header">
+    <a href="#" class="setting header-btn ui-btn-left" data-transition="slide" data-reverse="true" data-shadow="false">设置</a>
+    <h1>所有页面</h1>
+</header>
+<div data-role="content" class="generic-wrapper" >
+    <ul data-role="listview" data-theme="contract" >
+        <li>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <p><a class="title" href="#my-created" data-transition="slide">我的发起</a></p>
+                </div>
+                <div class="ui-block-b">
+                    <p><a class="title" href="#my-unhandled" data-transition="slide">我的待办</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <p><a class="title" href="#dep-unhandled" data-transition="slide">部门待办</a></p>
+                </div>
+                <div class="ui-block-b">
+                    <p><a class="title" href="#my-processed" data-transition="slide">经手合同</a></p>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <p><a class="title" href="#contract-detail" data-transition="slide">合同内容</a></p>
+                </div>
+                <div class="ui-block-b">
+                    <p><a class="title" href="#contract-detail" data-transition="slide">详细内容</a></p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</div>
 <div data-role="page" id="my-created" data-theme="metal" >
     <header class="page-header" data-role="header">
-       <h1>我的发起</h1>
+        <a href="javascript: void(0);" class="setting header-btn ui-btn-left" data-transition="slide" data-reverse="true" data-shadow="false">Setting</a>
+       <h1>发起时间</h1>
     </header>
     <div data-role="content" class="generic-wrapper" >
         <ul class="multi-line linked" data-role="listview" data-theme="contract" >
             <li>
                 <div class="ui-grid-a">
+                    <div class="ui-block-a full">
+                        <p class="highlight h3">ERP项目开发</p>
+                    </div>
+                </div>
+                <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <p>名称：移动项目开发</p>
-                        <p>发起人：蒋丹枫</p>
-                        <p>发起时间：2014.09.09</p>
+                        <p>类型：部门审批</p>
+                        <p>对方：<span class="title">用友软件</span></p>
                     </div>
                     <div class="ui-block-b">
-                        <p>类型：部门审批</p>
-                        <p>对方：德勤公司</p>
-                        <p>收到时间：2014.09.12</p>
+                        <p>状态：<span class="title">部门会签</span></p>
+                        <p>发起：2014.09.12</p>
                     </div>
                 </div>
             </li>
             <li>
                 <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <p>名称：ERP项目开发</p>
-                        <p>发起人：吴先生</p>
-                        <p>发起时间：2014.10.11</p>
-                    </div>
-                    <div class="ui-block-b">
-                        <p>类型：部门审批</p>
-                        <p>对方：用友软件</p>
-                        <p>收到时间：2014.10.14</p>
+                    <div class="ui-block-a full">
+                        <p class="highlight h3">移动项目开发</p>
                     </div>
                 </div>
-            </li>
-            <li>
                 <div class="ui-grid-a">
                     <div class="ui-block-a">
-                        <p>名称：气体并购项目</p>
-                        <p>发起人：邢先生</p>
-                        <p>发起时间：2014.10.13</p>
+                        <p>类型：部门审批</p>
+                        <p>对方：<span class="title">德勤公司</span></p>
                     </div>
                     <div class="ui-block-b">
-                        <p>类型：部门审批</p>
-                        <p>对方：上海燃气</p>
-                        <p>收到时间：2014.10.14</p>
-                    </div>
-                </div>
-            </li>
-            <li>
-                <div class="ui-grid-a">
-                    <div class="ui-block-a">
-                        <p>名称：移动项目开发</p>
-                        <p>发起人：蒋丹枫</p>
-                        <p>发起时间：2014.09.09</p>
-                    </div>
-                    <div class="ui-block-b">
-                        <p>类型：部门审批</p>
-                        <p>对方：德勤公司</p>
-                        <p>收到时间：2014.09.12</p>
+                        <p>状态：<span class="title">部门会签</span></p>
+                        <p>发起：2014.09.12</p>
                     </div>
                 </div>
             </li>
@@ -81,7 +100,7 @@
     <div class="page-footer" data-role="footer">
         <div data-role="navbar">
             <ul>
-                <li><a class="ui-btn created ui-btn-active" href="#my-list"  data-transition="slide">我的发起</a></li>
+                <li><a class="ui-btn created ui-btn-active" href="#my-created"  data-transition="slide">我的发起</a></li>
                 <li><a class="ui-btn myunhandled" href="#my-unhandled"  data-transition="slide">我的待办</a>
                     <span class="unhandled">2</span>
                 </li>
@@ -121,7 +140,6 @@
                 <div class="ui-grid-a">
                     <div class="ui-block-a full">
                         <p>对方：<span class="title">德勤公司</span></p>
-                        <span class="alert"></span>
                     </div>
                 </div>
                 <div class="ui-grid-a">
@@ -361,7 +379,7 @@
     <div class="page-footer" data-role="footer">
         <div data-role="navbar">
             <ul>
-                <li><a class="ui-btn created" href="#my-list" data-transition="slide">我的发起</a></li>
+                <li><a class="ui-btn created" href="#my-created" data-transition="slide">我的发起</a></li>
                 <li><a class="ui-btn myunhandled" href="#my-unhandled" data-transition="slide">我的待办</a>
                     <span class="unhandled">2</span>
                 </li>
@@ -440,7 +458,7 @@
     <div class="page-footer" data-role="footer">
         <div data-role="navbar">
             <ul>
-                <li><a class="ui-btn created" href="#my-list"  data-transition="slide">我的发起</a></li>
+                <li><a class="ui-btn created" href="#my-created"  data-transition="slide">我的发起</a></li>
                 <li><a class="ui-btn myunhandled" href="#my-unhandled" data-transition="slide">我的待办</a>
                     <span class="unhandled">2</span>
                 </li>
@@ -686,36 +704,64 @@
                 </div>
             </div>
             <div id="process-history">
-                <ul data-role="listview" data-theme="contract" >
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <p>名称：移动项目开发</p>
-                                <p>发起人：蒋丹枫</p>
-                                <p>发起时间：2014.09.09</p>
+                <div class="inner-content">
+                    <div class="timeline">
+                        <div class="timeline-row">
+                            <div class="timeline-time">
+                                2014/11/15 <small>10:30</small>
                             </div>
-                            <div class="ui-block-b">
-                                <p>类型：部门审批</p>
-                                <p>对方：德勤公司</p>
-                                <p>收到时间：2014.09.12</p>
+                            <div class="timeline-circular bg-orange">
+                                <div class="inner-circular"></div>
                             </div>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="ui-grid-a">
-                            <div class="ui-block-a">
-                                <p>名称：ERP项目开发</p>
-                                <p>发起人：吴先生</p>
-                                <p>发起时间：2014.10.11</p>
-                            </div>
-                            <div class="ui-block-b">
-                                <p>类型：部门审批</p>
-                                <p>对方：用友软件</p>
-                                <p>收到时间：2014.10.14</p>
+                            <div class="timeline-content">
+                                <div>
+                                    <h3 class="title">葛丽（已审核</h3>
+                                    <p>已检查相关的法律风险。</p>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                        <div class="timeline-row">
+                            <div class="timeline-time">
+                                2014/11/13 <small>16:30</small>
+                            </div>
+                            <div class="timeline-circular bg-red">
+                                <div class="inner-circular"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div>
+                                    <h3 class="title">康慷(已处理)</h3>
+                                    <p>请检查合同补充条款，有关后期维护的费用。</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-row">
+                            <div class="timeline-time">
+                                2014/11/14 <small>14:11</small>
+                            </div>
+                            <div class="timeline-circular bg-green">
+                                <div class="inner-circular"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div>
+                                    <h3 class="highlight">发起人：蒋丹枫</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timeline-row">
+                            <div class="timeline-time">
+                                <!--2014/11/15 <small>16:40</small>-->
+                            </div>
+                            <div class="timeline-circular bg-blue">
+                                <div class="inner-circular"></div>
+                            </div>
+                            <div class="timeline-content">
+                                <div>
+                                    <h3 class="highlight"> 移动项目开发</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="attachment">
                 <ul data-role="listview" data-theme="contract" >
