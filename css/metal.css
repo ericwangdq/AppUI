@@ -269,8 +269,7 @@
 /*Table*/
 .ui-page-theme-metal table{
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 10px auto;
     border: 1px solid #898989;
 }
 .ui-page-theme-metal thead th{
@@ -291,20 +290,25 @@
 }
 
 /*Button*/
-.ui-page-theme-metal button{
+.ui-page-theme-metal button.ui-btn{
     background-color: #40A2D8;
     color: #fff;
-    letter-spacing: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    margin: 10px ;
+    padding: 5px;
+    width: 80%;
 }
+.ui-page-theme-metal button.bg-black{
+    background-color: #222e35;
+}
+
 
 /*Time line*/
 .timeline {
     list-style: none;
     position: relative;
-    max-width: 1200px;
-    padding: 40px 20px;
-    margin: 15px auto;
+    padding: 0 20px;
+    margin: 20px auto;
     overflow: hidden;
 }
 .timeline:after {
@@ -320,23 +324,25 @@
     display: block;
 }
 .timeline .timeline-row {
-    margin-bottom: 30px;
     padding-left: 0;
     padding-right: 0;
     position: relative;
+    margin-bottom: 25px;
     z-index: 10;
+}
+.timeline .timeline-row.last {
+    margin-bottom: 0;
 }
 .timeline .timeline-row .timeline-time {
     position: absolute;
     left: -14px;
-    top: 6px;
+    top: 10px;
     text-align: right;
     font-size: 13px;
     line-height: 1.3;
     font-weight: 600;
     color: #fa8e10;
     margin-bottom: 6px;
-
 }
 .timeline .timeline-row .timeline-time small {
     display: block;
@@ -349,7 +355,7 @@
     box-sizing: border-box;
     /*box-shadow: 0 0 0 4px #000, 0 2px 0 rgba(0, 0, 0, 0.08) inset, 0 3px 0 4px rgba(0, 0, 0, 0.05);*/
     position: absolute;
-    top: 12px;
+    top: 14px;
     left: 69px;
     margin-left: 0;
     width: 20px;
@@ -366,7 +372,7 @@
     width: 14px;
     height: 14px;
     z-index: 110;
-    background-color: #fff;
+    /*background-color: #fff;*/
     border-radius: 50%;
 }
 
@@ -374,11 +380,13 @@
     border-radius: 4px;
     border: 1px solid #dedbdb;
     margin-left: 115px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     position: relative;
     background-color: white;
     color: #333333;
     min-height: 42px;
+    top: 3px;
+    left: 0;
 }
 .timeline .timeline-row .timeline-content:after {
     content: "";
@@ -403,6 +411,7 @@
     color: #767676;
     font-size: 0.929em;
 }
+
 .bg-blue {
     background-color: #75bcdb;
 }
@@ -418,8 +427,8 @@
 .bg-red {
     background-color: #f05a5b;
 }
-.bg-dark {
-    background-color: #bbbbbb;
+.bg-black {
+    background-color: #222e35;
 }
 
 
