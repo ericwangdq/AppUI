@@ -1,0 +1,192 @@
+html, body, section,
+div.layout {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+div {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    font: inherit;
+    vertical-align: baseline;
+    text-shadow:0 0 ;
+}
+body, input, select, textarea, button, .ui-btn {
+    font-family: sans-serif;
+    font-family: "\5FAE\8F6F\96C5\9ED1", arial, sans-serif;
+    line-height: 1.5em;
+}
+
+input:focus {
+    -webkit-focus-ring-color: rgba(0, 0, 0, 0);
+    -webkit-user-modify: read-write-plaintext-only;
+}
+
+h1, h2, h3, h4, h5, h6, ul, li, img{
+    margin: 0;
+    padding: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+a:link {
+    text-decoration: none;
+}
+a:visited {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+h1, .h1{
+    font-size: 1.285em !important;
+    font-weight: bold;
+}
+h2, .h2{
+    font-size: 1.142em !important;
+    font-weight: bold;
+}
+h3, .h3, h4, .h4, h4, .h4, h5, .h5{
+    font-size: 1em !important;
+    font-weight: bold;
+}
+.ui-btn {
+    font-size: 1em;
+}
+.ui-page .ui-header .ui-title,
+.ui-page .ui-footer .ui-title
+{
+    font-size: 1.285em;
+    letter-spacing: 3px;
+}
+
+.ui-page .page-header {
+    width: 100%;
+    height: 44px;
+    z-index: 2;
+    position: absolute;
+    top:0;
+    left:0;
+}
+
+.ui-page .ui-content {
+    padding: 0;
+}
+
+.ui-page.no-footer .ui-content {
+    bottom: 0;
+}
+
+.generic-wrapper {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    top: 44px;
+    bottom: 48px;
+    left: 0;
+    overflow: hidden;
+}
+
+.scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+.ui-page .page-footer {
+    border: 0;
+    padding: 0;
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    opacity: 0.9;
+}
+
+.inner-content{
+    padding: .5em;
+}
+
+.ui-mobile-viewport .ui-datepicker td span,
+.ui-mobile-viewport .ui-datepicker a{
+    font-size: 14px;
+}
+
+.ui-grid-a > .ui-block-a.one,
+.ui-grid-a > .ui-block-b.one{
+    width: 30%;
+}
+
+.ui-grid-a > .ui-block-a.two,
+.ui-grid-a > .ui-block-b.two{
+    width: 70%;
+}
+.ui-grid-a > .ui-block-a.full,
+.ui-grid-a > .ui-block-b.full{
+    width: 100%;
+}
+
+body{
+    font-size: 87.5%;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    /* prevent text selection on ui */
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    /* prevent scrolling in windows phone */
+    -ms-touch-action: none;
+}
+
+.font-red {
+    color: red;
+}
+.font-orange {
+    color: orange;
+}
+.font-white {
+    color: white;
+}
+.scroller-touch{
+    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}

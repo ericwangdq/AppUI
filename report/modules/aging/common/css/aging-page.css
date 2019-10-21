@@ -1,0 +1,21 @@
+#aging-page #category-selector{
+    position: absolute;
+    top: 34px;
+    z-index: 5;
+}
+
+#aging-page #summary-chart,
+#aging-page #chart-wrapper
+#aging-page #percentage-wrapper,
+#aging-page #percentage-chart{
+    width: 100%;
+}
+#aging-page #percentage-info,
+#aging-page #bar-info{
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 20px;
+}
+#aging-page #data-info{
+    margin-top: 35px;
+}

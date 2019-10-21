@@ -1,0 +1,53 @@
+<header class="page-header" data-role="header">
+    <a href="#settingpanel" class="setting header-btn ui-btn-left" data-transition="slide" data-shadow="false">Setting</a>
+    <a href="javascript: void(0)" class="back-page header-btn ui-btn-left" data-transition="slide" data-shadow="false" style="display: none;">返回</a>
+    <h1>库存基本报表</h1>
+    <a href="#popup-company" class="company-setting header-btn ui-btn-right" data-shadow="false" data-rel="popup" data-position-to="window" data-transition="slideup">选择子公司</a>
+    <a href="#toolbar" class="tool header-btn ui-btn-right" data-shadow="false" data-rel="popup" data-transition="flip">工具</a>
+</header>
+<div data-role="content" class="generic-wrapper" >
+    <div data-role="tabs" id="home-tabs">
+        <div data-role="navbar" class="tab-bar three">
+            <ul>
+                <li><a id="data-info-tab" class="circular ui-btn-active" href="#data-info" data-ajax="false"></a></li>
+                <li><a id="bar-info-tab" class="circular" href="#bar-info" data-ajax="false"></a></li>
+                <li><a id="percentage-info-tab" class="circular" href="#percentage-info" data-ajax="false"></a></li>
+            </ul>
+        </div>
+        <div id="data-info">
+
+        </div>
+        <div id="bar-info">
+
+        </div>
+        <div id="percentage-info">
+
+        </div>
+    </div>
+    <div id="grouping">
+        <div class="group-nav">
+            <a href="javascript: void(0)" id="expand-all">所有子公司</a>
+        </div>
+        <div id="group-info">
+
+        </div>
+    </div>
+    <div id="date-selector">
+        <select name="date-value" id="date-value" data-inline="true" data-shadow="false">
+            <option value="">时间</option>
+            <!--<option value="day">2014年12月13日</option>-->
+            <!--<option value="day">2014年12月14日</option>-->
+        </select>
+    </div>
+</div>
+<div class="page-footer" data-role="footer">
+    <div data-role="navbar">
+        <ul>
+            <li><a class="ui-btn inventory ui-btn-active" href="#page/home">基本报表</a></li>
+            <li><a class="ui-btn aging" href="#page/aging">库龄</a></li>
+            <li><a class="ui-btn turnover" href="#page/turnover">库存周转</a></li>
+        </ul>
+    </div>
+</div>
+
+

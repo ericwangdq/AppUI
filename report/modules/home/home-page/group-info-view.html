@@ -1,0 +1,133 @@
+<%if(groupData.groups.length > 0){
+    var allTotal=0
+%>
+    <div class="scroller">
+        <%_.each(groupData.groups, function(group,i){%>
+            <ul>
+                <%_.each(group.categoryShowBeanList, function(category,i){%>
+                    <%if(category.categoryShowCode != "C5"){%>
+                        <li><%= Math.round(category.totalNumber)%></li>
+                    <%}%>
+                <%})%>
+                <li><%= Math.round(group.totalNumber)%></li>
+            </ul>
+        <%})%>
+        <ul>
+            <%_.each(groupData.categoryTotal, function(category,i){%>
+                <%if(category.categoryShowCode == "C1"){
+                    allTotal = Math.round(allTotal) + Math.round(category.totalNumber);
+                %>
+                    <li><%= Math.round(category.totalNumber)%></li>
+                <%}%>
+                <%if(category.categoryShowCode == "C2"){
+                    allTotal = Math.round(allTotal) + Math.round(category.totalNumber);
+                %>
+                    <li><%= Math.round(category.totalNumber)%></li>
+                <%}%>
+                <%if(category.categoryShowCode == "C3"){
+                    allTotal = Math.round(allTotal) + Math.round(category.totalNumber);
+                %>
+                    <li><%= Math.round(category.totalNumber)%></li>
+                <%}%>
+                <%if(category.categoryShowCode == "C4"){
+                    allTotal = Math.round(allTotal) + Math.round(category.totalNumber);
+                %>
+                    <li><%= Math.round(category.totalNumber)%></li>
+                <%}%>
+            <%})%>
+            <li><%=Math.round(allTotal)%></li>
+        </ul>
+</div>
+<div class="row-header">
+    <ul>
+        <%_.each(groupData.groups, function(item,i){%>
+            <li>
+                <%=item.companyGroupName%>
+            </li>
+        <%})%>
+        <li>总计:</li>
+    </ul>
+</div>
+<div class="main-header">
+    <ul >
+        <li class="header line">
+            <span class="row-title">板块</span>
+            <span class="col-unit">吨</span>
+        </li>
+    </ul>
+</div>
+<div class="column-header">
+    <ul>
+        <%_.each(groupData.groups[0].categoryShowBeanList, function(category,i){%>
+            <%if(category.categoryShowCode != "C5"){%>
+                <li><%=category.categoryShowName%></li>
+            <%}%>
+        <%})%>
+        <li>合计</li>
+    </ul>
+</div>
+<div class="column-header-bg">
+</div>
+<%}else{%>
+<div class="message data-empty">
+    <p>暂无数据</p>
+</div>
+<%}%>
+
+<!--<div class="scroller">-->
+    <!--<ul>-->
+        <!--<li>21312</li>-->
+        <!--<li>31232</li>-->
+        <!--<li>32131</li>-->
+        <!--<li>22200</li>-->
+        <!--<li>113243</li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li>4324</li>-->
+        <!--<li>4114</li>-->
+        <!--<li>2432</li>-->
+        <!--<li>8767</li>-->
+        <!--<li>17623</li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li>54521</li>-->
+        <!--<li>1231</li>-->
+        <!--<li>7876</li>-->
+        <!--<li>3432</li>-->
+        <!--<li>38987</li>-->
+    <!--</ul>-->
+    <!--<ul>-->
+        <!--<li>522653</li>-->
+        <!--<li>221312</li>-->
+        <!--<li>322213</li>-->
+        <!--<li>421534</li>-->
+        <!--<li>2137576</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div class="row-header">-->
+    <!--<ul>-->
+        <!--<li>贸易部</li>-->
+        <!--<li>包装板块</li>-->
+        <!--<li>制品板块</li>-->
+        <!--<li>总计:</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div class="main-header">-->
+    <!--<ul >-->
+        <!--<li class="header line">-->
+            <!--<span class="row-title">板块</span>-->
+            <!--<span class="col-unit">吨</span>-->
+        <!--</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div class="column-header">-->
+    <!--<ul>-->
+        <!--<li>原料在途</li>-->
+        <!--<li>原材料</li>-->
+        <!--<li>成品</li>-->
+        <!--<li>销售在途</li>-->
+        <!--<li>合计</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<!--<div class="column-header-bg">-->
+<!--</div>-->

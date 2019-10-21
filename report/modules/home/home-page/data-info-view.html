@@ -1,0 +1,79 @@
+<%if(collection.length > 0){
+    var mitTotal=0, rmTotal=0, fpTotal=0, sitTotal=0; var allTotal=0;
+%>
+    <div class="scroller">
+        <%_.each(collection, function(item,i){
+            var categoryTotal= 0;
+        %>
+            <ul>
+                <%_.each(item.categories.toJSON(), function(category,i){%>
+                    <%if(category.categoryCode!="C5"){
+                        categoryTotal = Math.round(categoryTotal) +
+                        Math.round(category.totalNumber);
+                        allTotal = Math.round(allTotal) + categoryTotal;
+                    %>
+                        <li><%= Math.round(category.totalNumber)%></li>
+                    <%}%>
+
+                    <%
+                        if(category.categoryCode == "C1"){
+                            mitTotal = mitTotal + Math.round(category.totalNumber);
+                        }
+                        if(category.categoryCode == "C2"){
+                            rmTotal =  rmTotal + Math.round(category.totalNumber);
+                        }
+                        if(category.categoryCode == "C3"){
+                            fpTotal =  fpTotal + Math.round(category.totalNumber);
+                        }
+                        if(category.categoryCode == "C4"){
+                            sitTotal = sitTotal + Math.round(category.totalNumber);
+                        }
+                    %>
+                <%})%>
+                <li><%=Math.round(categoryTotal)%></li>
+            </ul>
+        <%})%>
+        <ul>
+            <li><%=Math.round(mitTotal)%></li>
+            <li><%=Math.round(rmTotal)%></li>
+            <li><%=Math.round(fpTotal)%></li>
+            <li><%=Math.round(sitTotal)%></li>
+            <li><%=Math.round(allTotal)%></li>
+        </ul>
+    </div>
+    <div class="row-header">
+        <ul>
+            <%_.each(collection, function(item,i){%>
+            <li data-attr="<%=item.companyCode%>">
+                <%=item.companyName%>
+            </li>
+            <%})%>
+            <li>总计:</li>
+        </ul>
+    </div>
+    <div class="main-header">
+        <ul >
+            <li class="header line">
+                <span class="row-title">子公司</span>
+                <span class="col-unit">吨</span>
+            </li>
+        </ul>
+    </div>
+    <div class="column-header">
+        <ul>
+            <%_.each(collection[0].categories.toJSON(), function(category,i){%>
+                <%if(category.categoryCode != "C5"){%>
+                    <li><%=category.categoryName%></li>
+                <%}%>
+            <%})%>
+            <li>合计</li>
+        </ul>
+    </div>
+    <div class="column-header-bg">
+    </div>
+<%}else{%>
+    <div class="message data-empty">
+        <p>暂无数据</p>
+    </div>
+<%}%>
+

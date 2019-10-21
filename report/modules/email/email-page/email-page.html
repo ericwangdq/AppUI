@@ -1,0 +1,114 @@
+<header class="page-header" data-role="header">
+    <a href="#" class="back header-btn ui-btn-left" data-transition="slide" data-shadow="false">返回</a>
+    <h1>发送邮件</h1>
+</header>
+<div data-role="content" class="generic-wrapper" >
+    <div class="scroller-touch">
+        <div id="person-list">
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d title">发送对象：</div></div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-d">
+                        <div class="to-email">
+                            <p class="placeholder">请添加发送对象</p>
+                            <ul class="email-list">
+                                <!--<li data-id="110808" data-attr="6611094@qq.com">QQ邮箱<span class="remove"></span></li>-->
+                                <!--<li data-id="110815" data-attr="ericwang@deloitte.com.cn">deloitte邮箱<span class="remove"></span></li>-->
+                            </ul>
+                            <ul class="copy-list">
+
+                            </ul>
+                            <div class="add-person">
+                            </div>
+                            <!--<div class="recent-persons">-->
+                            <!--</div>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="email-area">
+            <div class="ui-grid-a recent-btn-container">
+                <div class="ui-block-a"><div class="ui-body ui-body-d title"></div></div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-d">
+                        <button id="recent-person" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-person">常用联系人</button>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d title">标题：</div></div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-d">
+                        <input type="text" data-clear-btn="true" name="subject" id="subject" value="" placeholder="请输入邮件标题">
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d title">内容：</div></div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-d">
+                        <textarea name="email-content" id="email-content" data-clear-btn="true"  placeholder="请输入邮件内容（不超过140字）"></textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-grid-a ui-responsive">
+                <div class="ui-block-a"><div class="ui-body ui-body-d title">附件(<span class="count">0</span>)：</div></div>
+                <div class="ui-block-b">
+                    <div class="ui-body ui-body-d">
+                        <div id="attachment-content">
+                            <div class="empty-message"></div>
+                            <ul class="img-list">
+                                <!--<li class="checked">-->
+                                    <!--<img src="modules/email/common/img/screen1.png">-->
+                                <!--</li>-->
+                                <!--<li>-->
+                                    <!--<img src="modules/email/common/img/screen2.png">-->
+                                <!--</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="contact-area">
+            <!--<div id="contact-close">-->
+                <!--<div class="ui-grid-a">-->
+                    <!--<div class="ui-block-a">-->
+                        <!--<a href="javascript:void(0)" id="previous">返回</a>-->
+                    <!--</div>-->
+                    <!--<div class="ui-block-b">-->
+                        <!--<a href="javascript:void(0)" id="close-contact">关闭</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <div id="contact-list" class="scroller-touch">
+                <div id="group-container"></div>
+                <div id="person-container"></div>
+                <div id="recent-container"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="page-footer" data-role="footer">
+    <div id="email-footer" data-role="navbar">
+        <ul>
+            <li></li>
+            <li></li>
+            <li><button id="send-email" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-mail">发送</button></li>
+        </ul>
+    </div>
+    <div id="contact-footer" data-role="navbar">
+        <ul>
+            <li><a href="javascript:void(0)" id="previous">返回</a></li>
+            <li><button id="confirm-select-to" class="ui-btn ui-shadow ui-corner-all">收件人</button></li>
+            <li><button id="confirm-select-copy" class="ui-btn ui-shadow ui-corner-all">抄送人</button></li>
+            <li>
+                <!--<a href="javascript:void(0)" id="close-contact">关闭</a>-->
+                <button id="close-contact" class="ui-btn ui-shadow ui-corner-all">关闭</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+

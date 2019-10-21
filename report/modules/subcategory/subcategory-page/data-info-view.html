@@ -1,0 +1,118 @@
+<%if(model.subCategories.toJSON().length >0){
+var realLength = function(str) {
+    var length = 0;
+    var item = str.split("");
+    for (var i = 0; i < item.length; i++) {
+        if (item[i].charCodeAt(0) < 299) {
+            length++;
+        } else {
+            length += 2;
+        }
+    }
+    return length;
+}
+var subString = function(str, len, hasDot)
+{
+    var newLength = 0;
+    var newStr = "";
+    var chineseRegex = /[^\x00-\xff]/g;
+    var singleChar = "";
+    var strLength = str.replace(chineseRegex,"**").length;
+
+    for(var i = 0;i < strLength;i++){
+        singleChar = str.charAt(i).toString();
+        if(singleChar.match(chineseRegex) != null){
+            newLength += 2;
+        }else{
+            newLength++;
+        }
+        if(newLength > len){
+            break;
+        }
+        newStr += singleChar;
+    }
+
+    if(hasDot && strLength > len){
+    newStr += "...";
+    }
+    return newStr;
+}
+%>
+    <div class="scroller">
+        <%_.each(model.subCategories.toJSON(), function(subCategory, i){%>
+            <%_.each(subCategory.categories, function(category, i){
+                var CssClass = "one-line";
+                var length = realLength(category.thirdCategoryName);
+                if(length >= 12){
+                    CssClass = "two-lines";
+                }
+            %>
+                <ul>
+                    <li class="<%=CssClass%>">
+                        <%if(length <= 24){%>
+                            <%=category.thirdCategoryName%>
+                        <%}else{%>
+                            <%=subString(category.thirdCategoryName,22,true)%>
+                        <%}%>
+                    </li>
+                    <li><%=category.totalNumber%></li>
+                    <li>
+                        <%if(i == subCategory.categories.length-1){%>
+                            <%=subCategory.totalNumber%>
+                        <%}%>
+                    </li>
+                </ul>
+            <%})%>
+        <%})%>
+        <ul>
+            <li></li>
+            <li><%=model.totalNumber%></li>
+            <li><%=model.totalNumber%></li>
+        </ul>
+    </div>
+    <div class="main-header">
+        <ul >
+            <li class="header">主类</li>
+        </ul>
+    </div>
+    <div class="row-header">
+        <ul>
+            <%_.each(model.subCategories.toJSON(), function(subCategory,i){
+                var isTablet = $(window).width() >= 768
+                var height = 40;
+                if(isTablet){
+                    height = 60;
+                }
+                var colHeight = subCategory.categories.length * height
+                var CssClass = "one-line";
+                var length = realLength(subCategory.categoryName);
+                if(length > 12){
+                    CssClass = "two-lines";
+                }
+            %>
+                <li class="<%=CssClass%>" style="height: <%=colHeight%>px;" >
+                    <%if(length <= 24){%>
+                        <%=subCategory.categoryName%>
+                    <%}else{%>
+                        <%=subString(subCategory.categoryName,22,true)%>
+                    <%}%>
+                </li>
+            <%})%>
+            <li>总计：</li>
+        </ul>
+    </div>
+    <div class="column-header">
+        <ul>
+            <li class="header">次类</li>
+            <li class="header">吨数</li>
+            <li class="header">主类合计</li>
+        </ul>
+    </div>
+    <div class="column-header-bg">
+    </div>
+
+<%}else{%>
+    <div class="message data-empty">
+        <p>暂无数据</p>
+    </div>
+<%}%>

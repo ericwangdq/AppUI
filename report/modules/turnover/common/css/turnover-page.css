@@ -1,0 +1,23 @@
+#turnover-page #category-selector{
+    position: absolute;
+    left: 5px;
+    top: 0;
+    margin-left: 0;
+    z-index: 3;
+}
+#turnover-page #company-selector{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 0;
+    z-index: 3;
+}
+
+#turnover-page #line-charts{
+    position: absolute;
+    left: 0;
+    top: 45px;
+    width: 100%;
+    margin: 0;
+    z-index: 1;
+}

@@ -1,0 +1,40 @@
+<%if(model.customers.length > 0){%>
+    <div class="scroller">
+        <%_.each(model.customers, function(customer,i){%>
+            <ul>
+                <li>
+                    <%=Math.round(customer.totalNumber)%>
+                </li>
+            </ul>
+        <%})%>
+        <ul>
+            <li> <%=Math.round(model.totalNumber)%></li>
+        </ul>
+    </div>
+    <div class="main-header">
+        <ul >
+            <li class="header">客户</li>
+        </ul>
+    </div>
+    <div class="row-header">
+        <ul>
+            <%_.each(model.customers, function(customer,i){%>
+                <li>
+                    <%=customer.customerName%>
+                </li>
+            <%})%>
+            <li class="total">总计：</li>
+        </ul>
+    </div>
+    <div class="column-header">
+        <ul>
+            <li class="header">吨数</li>
+        </ul>
+    </div>
+    <div class="column-header-bg">
+    </div>
+<%}else{%>
+    <div class="message data-empty">
+        <p>暂无数据</p>
+    </div>
+<%}%>

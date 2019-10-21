@@ -1,0 +1,28 @@
+<header class="page-header" data-role="header">
+    <a href="javascript:void(0)" class="back header-btn ui-btn-left" data-transition="slide" data-shadow="false">返回</a>
+    <h1>库存次类报表</h1>
+    <a href="javascript:void(0)" class="tool header-btn ui-btn-right" data-shadow="false">工具</a>
+</header>
+<div data-role="content" class="generic-wrapper no-footer" >
+    <div data-role="tabs" id="sub-tabs"  class="inventory-tab">
+        <div data-role="navbar" class="tab-bar">
+            <ul>
+                <li><a id="mit-sub-tab" class="ui-btn-active" href="#mit-sub">采购在途</a>
+                </li>
+                <li><a id="rm-sub-tab" href="#rm-sub">原材料</a>
+                </li>
+                <li><a id="fp-sub-tab" href="#fp-sub">成品</a>
+                </li>
+                <li><a id="sit-sub-tab" href="#sit-sub">销售在途</a>
+                </li>
+                <li><a id="wip-sub-tab" href="#wip-sub">热轧钢带</a>
+                </li>
+            </ul>
+        </div>
+        <div id="mit-sub" class="sub-data-container"></div>
+        <div id="rm-sub" class="sub-data-container"></div>
+        <div id="fp-sub" class="sub-data-container"></div>
+        <div id="sit-sub" class="sub-data-container"></div>
+        <div id="wip-sub" class="sub-data-container"></div>
+    </div>
+</div>

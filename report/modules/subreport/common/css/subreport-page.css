@@ -1,0 +1,131 @@
+#subreport-page table.inventory.four{
+    margin-top: 5px;
+}
+/*Range slide*/
+#month-start,
+#month-end{
+    display: none;
+    /*visibility: hidden;*/
+}
+#months{
+    margin: 0 10px;
+    height: 45px;
+}
+#months ul{
+    list-style: none;
+    width: 100%;
+}
+#months ul li{
+    color: #666;
+    list-style-type: none;
+    float: left;
+    width: 7.692%;
+    font-size: 12px;
+    line-height: 13px;
+    text-align: center;
+}
+#months ul li span{
+    display: block
+}
+div.months-intro{
+    height: 30px;
+    margin-top: 10px;
+    color: #474747;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+}
+#subreport-page .ui-rangeslider .ui-rangeslider-sliders{
+    margin: 0 10px;
+}
+#subreport-page .ui-rangeslider.ui-mini .ui-rangeslider-sliders .ui-slider-track:first-child
+{
+    border: 0;
+    background-color: transparent;
+    height: 0;
+}
+#subreport-page .ui-slider-track.ui-mini{
+    height: 3px;
+}
+#subreport-page .ui-rangeslider .ui-rangeslider-sliders{
+    height: 20px;
+}
+#subreport-page .ui-slider-track{
+    border-width: 1px;
+    border-color: #c5c5c5;
+}
+
+#subreport-page .ui-slider-track .ui-slider-handle
+{
+    background: url(../img/slide.png) no-repeat -3px -1px transparent;
+    box-shadow: none;
+    border: 0;
+    height: 28px;
+    width: 24px;
+    margin: -12px 0 0 -11px
+}
+
+#subreport-page table.inventory td span.up{
+    background: url("../img/up.png") no-repeat 5px 9px transparent;
+    background-size: auto 20px;
+}
+#subreport-page table.inventory td span.down{
+    background: url("../img/down.png") no-repeat 5px 9px transparent;
+    background-size: auto 20px;
+}
+#subreport-page table.inventory.four td
+{
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    padding-left: 0;
+}
+#subreport-page table.inventory td span{
+    display: inline-block;
+    width: 100%;
+    margin: 0 auto;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+}
+#wip-cont
+{
+    border-top: 1px solid #e9e9e9 ;
+    margin-top: 15px;
+    width: 100%;
+    display: none;
+}
+#wip-cont h2{
+    color: #5b5a5a;
+    margin: 20px auto 45px;
+    width: 100px;
+}
+
+#subreport-page .chart-parent{
+    position: relative;
+}
+#subreport-page .chart-parent .left-panel{
+    position: absolute;
+    left: 10px;
+    top: -37px;
+    z-index: 2;
+}
+#subreport-page .chart-parent .right-panel{
+    position: absolute;
+    right: 10px;
+    top: -37px;
+    z-index: 2;
+}
+#subreport-page .chart-cont{
+    margin-bottom: 30px;
+}
+#mit-area{
+    margin-top: 30px;
+}
+#wip-area-chart{
+    margin-bottom: 10px;
+}
+#subreport-page .tab-bar.chart-bar a.ui-btn{
+    font-size: 14px;
+    font-weight: bold;
+    padding: 3px 2px;
+}

@@ -1,0 +1,118 @@
+<header class="page-header" data-role="header">
+    <a href="javascript: void(0)" class="back header-btn ui-btn-left" data-transition="slide" data-shadow="false">返回</a>
+    <h1>库存基本报表</h1>
+    <a href="#toolbar" class="tool header-btn ui-btn-right" data-shadow="false" data-rel="popup" data-transition="flip">工具</a>
+</header>
+<div data-role="content" class="generic-wrapper no-footer" >
+    <table class="inventory four" cellpadding="0" cellspacing="0">
+        <thead>
+        <tr>
+            <th class="bg-inventory-mit">采购在途</th>
+            <th class="bg-inventory-rm">原材料</th>
+            <th class="bg-inventory-fp">成品</th>
+            <th class="bg-inventory-sit">销售在途</th>
+        </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span id="inventory-mit"></span></td>
+                <td><span id="inventory-rm"></span></td>
+                <td><span id="inventory-fp"></span></td>
+                <td><span id="inventory-sit"></span></td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="months-intro">
+        <div class="ui-grid-b">
+            <div class="ui-block-a">
+                <span id="picker-start"></span>
+            </div>
+            <div class="ui-block-b">
+                <img src="img/inventory/line.png" style="width:100%; max-width: 120px;margin: 2px auto 0;" alt="line">
+            </div>
+            <div class="ui-block-c">
+                <span id="picker-end"></span>
+            </div>
+        </div>
+    </div>
+    <div data-role="rangeslider" data-mini="true">
+        <!--<label for="range-2a">Mini rangeslider:</label>-->
+        <input type="range" name="month-start" id="month-start" min="0" max="12" value="0">
+        <!--<label for="range-2b">Mini rangeslider:</label>-->
+        <input type="range" name="month-end" id="month-end" min="0" max="12" value="12">
+    </div>
+    <div id="months">
+        <ul>
+            <!--<li><span id="target1">12</span>月</li>-->
+            <!--<li><span id="target2">1</span>月</li>-->
+            <!--<li><span id="target3">2</span>月</li>-->
+            <!--<li><span id="target4">3</span>月</li>-->
+            <!--<li><span id="target5">4</span>月</li>-->
+            <!--<li><span id="target6">5</span>月</li>-->
+            <!--<li><span id="target7">6</span>月</li>-->
+            <!--<li><span id="target8">7</span>月</li>-->
+            <!--<li><span id="target9">8</span>月</li>-->
+            <!--<li><span id="target10">9</span>月</li>-->
+            <!--<li><span id="target11">10</span>月</li>-->
+            <!--<li><span id="target12">11</span>月</li>-->
+            <!--<li><span id="target13">12</span>月</li>-->
+        </ul>
+    </div>
+    <div id="area-charts-wrapper" class="scroller-touch">
+        <div id="mit-area" class="chart-parent">
+            <div id="mit-area-chart" class="chart-cont" style="height: 180px;"></div>
+            <div class="right-panel">
+                <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                    <a href="javascript: void(0)" class="main-category ui-btn ui-corner-all">主类</a>
+                    <a href="javascript: void(0)" class="sub-category ui-btn ui-corner-all">次类</a>
+                </div>
+            </div>
+        </div>
+        <div id="rm-area" class="chart-parent">
+            <div id="rm-area-chart" class="chart-cont" style="height: 180px;"></div>
+            <div class="right-panel">
+                <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                    <a href="javascript: void(0)" class="main-category ui-btn ui-corner-all">主类</a>
+                    <a href="javascript: void(0)" class="sub-category ui-btn ui-corner-all">次类</a>
+                </div>
+            </div>
+        </div>
+        <div id="fp-area" class="chart-parent">
+            <div id="fp-area-chart" class="chart-cont" style="height: 180px;"></div>
+            <div class="left-panel">
+                <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                    <a href="javascript:void(0)" class="unit-ton ui-btn ui-corner-all ui-btn-active">吨</a>
+                    <a href="javascript:void(0)" class="unit-wan ui-btn ui-corner-all">万罐</a>
+                </div>
+            </div>
+            <div class="right-panel">
+                <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                    <a href="javascript: void(0)" class="main-category ui-btn ui-corner-all">主类</a>
+                    <a href="javascript: void(0)" class="sub-category ui-btn ui-corner-all">次类</a>
+                    <a href="javascript: void(0)" class="directional ui-btn ui-corner-all">定向</a>
+                </div>
+            </div>
+        </div>
+        <div id="sit-area" class="chart-parent">
+            <div id="sit-area-chart" class="chart-cont" style="height: 180px;"></div>
+            <div class="right-panel">
+                <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                    <a href="javascript: void(0)" class="main-category ui-btn ui-corner-all">主类</a>
+                    <a href="javascript: void(0)" class="sub-category ui-btn ui-corner-all">次类</a>
+                </div>
+            </div>
+        </div>
+        <div id="wip-cont">
+            <h2>热轧纵剪钢带</h2>
+            <div id="wip-area" class="chart-parent">
+                <div id="wip-area-chart" class="chart-cont" style="height: 200px;"></div>
+                <div class="right-panel">
+                    <div class="tab-bar chart-bar" data-role="controlgroup" data-type="horizontal">
+                        <a href="javascript: void(0)" class="main-category ui-btn ui-corner-all">主类</a>
+                        <a href="javascript: void(0)" class="sub-category ui-btn ui-corner-all">次类</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

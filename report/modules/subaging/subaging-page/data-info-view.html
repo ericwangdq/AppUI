@@ -1,0 +1,39 @@
+<%if(collection.length > 0){%>
+    <div class="scroller">
+        <%_.each(collection[0].months, function(month,i){%>
+            <ul>
+                <%_.each(collection, function(range,m){%>
+                    <li><%=range.months[i].totalNumber%></li>
+                <%})%>
+            </ul>
+        <%})%>
+    </div>
+    <div class="row-header">
+        <ul>
+            <%_.each(collection[0].months, function(month,i){%>
+            <li><%=month.monthName%></li>
+            <%})%>
+        </ul>
+    </div>
+    <div class="main-header">
+        <ul >
+            <li class="header line">
+                <span class="row-title">月份</span>
+                <span class="col-unit">吨</span>
+            </li>
+        </ul>
+    </div>
+    <div class="column-header">
+        <ul>
+            <%_.each(collection, function(range,i){%>
+                <li><%=range.rangeName%></li>
+            <%})%>
+        </ul>
+    </div>
+    <div class="column-header-bg">
+    </div>
+<%}else{%>
+    <div class="message data-empty">
+        <p>暂无数据</p>
+    </div>
+<%}%>

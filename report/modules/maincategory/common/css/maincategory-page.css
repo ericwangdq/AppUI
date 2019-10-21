@@ -1,0 +1,19 @@
+#maincategory-page .has-wip .tab-bar .ui-btn{
+    padding-left: 4px;
+    padding-right: 4px;
+}
+#maincategory-page #mit-main,
+#maincategory-page #rm-main,
+#maincategory-page #fp-main,
+#maincategory-page #sit-main,
+#maincategory-page #wip-main{
+    width: 100%;
+}
+
+#maincategory-page #mit-main-chart,
+#maincategory-page #rm-main-chart,
+#maincategory-page #fp-main-chart,
+#maincategory-page #sit-main-chart,
+#maincategory-page #wip-main-chart{
+    width: 100%;
+}

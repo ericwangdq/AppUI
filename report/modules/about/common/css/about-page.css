@@ -1,0 +1,21 @@
+#about-page .about-content{
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -125px;
+    margin-top: -130px;
+    z-index: 10;
+    text-align: center;
+}
+
+#about-page .app-name{
+    margin-top: 20px;
+    font-size: 16px;
+    color: #909090;
+}
+
+#about-page .app-version{
+    margin-top: 10px;
+    color: #909090;
+}

@@ -1,0 +1,41 @@
+#directional-page .data-wrapper .row-header li,
+#directional-page .data-wrapper .main-header,
+#directional-page .data-wrapper .main-header li{
+    width: 200px;
+}
+
+#directional-page .data-wrapper .row-header li,
+#directional-page .data-wrapper .scroller li{
+    height: 50px;
+}
+
+#directional-page .data-wrapper .row-header li{
+    text-align: left;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+#directional-page .data-wrapper .row-header li.total {
+    text-align: center;
+    padding-top: 15px;
+    font-weight: bold;
+    padding-left: 0;
+}
+
+#directional-page .data-wrapper .scroller li{
+    padding-top: 15px;
+}
+
+#directional-page .data-wrapper .scroller,
+#directional-page .data-wrapper .column-header{
+    left: 200px;
+}
+/*Tablet*/
+@media only screen
+and (min-device-width : 768px) {
+    /* STYLES GO HERE */
+    #directional-page .data-wrapper .row-header li,
+    #directional-page .data-wrapper .scroller li {
+        height: 60px;
+    }
+}

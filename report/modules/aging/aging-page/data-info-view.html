@@ -1,0 +1,39 @@
+<%if(collection.length > 0){%>
+    <div class="scroller">
+        <%_.each(collection, function(company,i){%>
+            <ul>
+                <%_.each(company.ranges.toJSON(), function(range,i){%>
+                    <li><%=range.totalNumber%></li>
+                <%})%>
+            </ul>
+        <%})%>
+    </div>
+    <div class="row-header">
+        <ul>
+            <%_.each(collection, function(company,i){%>
+            <li data-attr="<%=company.companyCode%>"><%=company.companyName%></li>
+            <%})%>
+        </ul>
+    </div>
+    <div class="main-header">
+        <ul >
+            <li class="header line">
+                <span class="row-title">子公司</span>
+                <span class="col-unit">吨</span>
+            </li>
+        </ul>
+    </div>
+    <div class="column-header">
+        <ul>
+            <%_.each(collection[0].ranges.toJSON(), function(range,i){%>
+                <li><%=range.rangeName%></li>
+            <%})%>
+        </ul>
+    </div>
+    <div class="column-header-bg">
+    </div>
+<%}else{%>
+    <div class="message data-empty">
+        <p>暂无数据</p>
+    </div>
+<%}%>
